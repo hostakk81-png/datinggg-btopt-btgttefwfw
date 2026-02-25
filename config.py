@@ -1,23 +1,20 @@
 # Конфигурация бота
-import os
-from dotenv import load_dotenv
+# ⚠️ ОТРЕДАКТИРУЙТЕ ЭТИ ЗНАЧЕНИЯ ДЛЯ ВАШЕГО БОТА!
 
-load_dotenv()
+# Токен бота от BotFather
+BOT_TOKEN = '8298830574:AAEgHrmFvjbsCjxx99CCl-XYJhZaLItw6k0'  # Замените на ваш реальный токен
 
-# Токен бота
-BOT_TOKEN = os.getenv('BOT_TOKEN', 'вставьте_ваш_токен_здесь')
+# ID группы для жалоб (с минусом, например: -100123456789)
+REPORTS_GROUP_ID = -1003889823700  # Замените на реальный ID
 
-# ID группы для жб (пример: -100123456789)
-REPORTS_GROUP_ID = int(os.getenv('REPORTS_GROUP_ID', '-100123456789'))
+# ID топика в группе (topic_id в группе для обсуждений, 0 если обычный чат)
+REPORTS_TOPIC_ID = 2  # Замените если используете топики
 
-# ID топика в группе (topic_id в группе, 0 если общий чат)
-REPORTS_TOPIC_ID = int(os.getenv('REPORTS_TOPIC_ID', '0'))
+# ID группы где выдаются наказания (обычная группа, не топик)
+PUNISHMENTS_GROUP_ID = -1003819980580  # Замените на реальный ID
 
-# ID группы где выдаются наказания (обычная группа)
-PUNISHMENTS_GROUP_ID = int(os.getenv('PUNISHMENTS_GROUP_ID', '-100123456789'))
-
-# IDs админов (список)
-ADMIN_IDS = list(map(int, os.getenv('ADMIN_IDS', '').split(','))) if os.getenv('ADMIN_IDS') else [123456789]
+# IDs админов (список ID администраторов)
+ADMIN_IDS = [752856061, 6290302179]  # Замените на реальные ID админов
 
 # Опции наказаний
 PUNISHMENTS = {
